@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,20 +12,8 @@ import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
 
 const App: React.FC = () => {
-  useEffect(() => {
-    // Simple script to inject Swiper dependencies dynamically
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
-    document.head.appendChild(link);
-
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
-    document.body.appendChild(script);
-  }, []);
-
   return (
-    <div className="min-h-screen font-sans">
+    <div className="min-h-screen font-sans selection:bg-brand-rosegold/30 selection:text-brand-rosegold">
       <Header />
       <main>
         <Hero />
